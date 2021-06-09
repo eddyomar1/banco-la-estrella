@@ -36,13 +36,33 @@
 
 
 #MiViVa, #product_service{margin-left: auto; margin-right: auto; align-content:center;  }
-/* animation-duration:2s; animation-delay:3s; */
 
-#con-his{background-color: silver;   }
+/* animation-duration:2s; animation-delay:3s; */
+#mi{animation-duration:2s; animation-delay:2s;}
+#vi{animation-duration:2s; animation-delay:3s;}
+#va{animation-duration:2s; animation-delay:4s;}
+
+
+
+
+.a{width:30em;}
+
+.a h2{font-size:1.6em;}
+
+#con-his{background-color: silver;  animation-duration:2s; animation-delay:5s;}
 #his{margin:10px; position: relative; width:100%; height:100%; background-attachment: fixed;}
 
+#pa{animation-duration:2s; animation-delay:6s;}
+#pb{animation-duration:2s; animation-delay:7s;}
+#pc{animation-duration:2s; animation-delay:8s;}
+#pd{animation-duration:2s; animation-delay:9s;}
+#pe{animation-duration:2s; animation-delay:10s;}
 
-footer{background-color: #222222;}
+
+
+
+
+footer{background-color: #222222; animation-delay:5s;}
 
 /* @media screen and (max-width:375px){
 
@@ -62,16 +82,17 @@ footer{background-color: #222222;}
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">hola</a>
+    <a class="navbar-brand" href="#"><i class="fa fa-solid fa-star "></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#MiViVa">Quienes somos </a>
+        <a class="nav-link" href="#MiViVa">Mision, Vison y Valores </a>
         <a class="nav-link" href="#product_service">productos y servicios</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="#his">Historia</a>
+        <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
       </div>
     </div>
   </div>
@@ -109,7 +130,7 @@ footer{background-color: #222222;}
 <br>
 
 
-<div id="con-his">
+<div id="con-his" class="animate__animated animate__fadeInUp">
   <div id="his" class="">
   <h1>Historia</h1>
   
@@ -118,17 +139,18 @@ footer{background-color: #222222;}
   </div>
   </div>
 
+  <br>
+  <br>
 
 
-
-<div id="product_service" class="container animate__animated animate__fadeIn" align="center">
+<div id="product_service" class="container " align="center">
 
 <!-- <div class="cen"> -->
 
-<div class="a">
-  <div class="img"><h2>Prestamos de vehículos nuevos y usados</h2></div>
-  <div class="txt" align="left" >
- 
+<div class="a container animate__animated animate__fadeIn" id="pa">
+  <div class="img"><h2>Prestamos de vehículos</h2></div>
+  <div class="txt">
+<!--  
  <h4>Beneficios:</h4>
     <p>❖ Atención y asesoría personalizada. <br>
     ❖ Financiamiento de hasta un 80% del valor del vehículo.<br>
@@ -137,15 +159,9 @@ footer{background-color: #222222;}
     ❖ Hasta 5 años para pagar.<br>
     ❖ Atractivas tasas de interés.<br>
     ❖ Facilidad de pagos electrónicos con cargo a las cuentas de nuestros clientes.<br>
-    </p> </div>
-</div>
-
-
-<div class="a">
-  <div class="img"><h2>Facilidades con Seguros La ESTRELLA</h2></div>
-  <div class="txt" align="left" >
- 
- <h4>Requisitos:</h4>
+    </p>
+  
+    <h4>Requisitos:</h4>
     <p>❖ Completar el formulario de solicitud.<br>
       ❖ Copia de la Cédula de Identidad y Electoral o pasaporte.<br>
       ❖ Tener mínimo de un (1) año laborando en la empresa de forma ininterrumpida.<br>
@@ -154,14 +170,27 @@ footer{background-color: #222222;}
       ❖ Tasación del suplidor, si el solicitante desea poner como inicial su vehículo usado.<br>
       ❖ Comprobante de pago del 10% de inicial, emitido por el concesionario o dealer.<br>
       <br>
-    </p> </div>
+    </p> -->
+
+
+  </div>
 </div>
 
+<!-- 
 <div class="a">
-  <div class="img"><h2>Vacaciones felices:</h2></div>
+  <div class="img"> <h2></h2> </div>
   <div class="txt" align="left" >
+  -->
+ <!-- </div>
+</div> -->
+
+<div class="a container animate__animated animate__fadeIn" id="pb">
+  <div class="img">
+    <!-- <h2>Facilidades con Seguros La ESTRELLA</h2> -->
+    <h2>Vacaciones felices</h2></div>
+  <div class="txt"  >
  
- <h4>Beneficios:</h4>
+ <!-- <h4>Beneficios:</h4>
     <p>❖ Préstamos a baja tasa de interés. <br>
       ❖ Hasta 18 meses para pagar.<br>
       ❖ Sin pago de intereses durante los tres (3) primeros meses.<br>
@@ -180,15 +209,16 @@ footer{background-color: #222222;}
   ❖ Seguro de Viajes con Seguros LA ESTRELLA (solo para viajes al exterior).<br>
   
 
-</p>
+</p> -->
+
 
   </div>
 </div>
 
-<div class="a">
-  <div class="img"><h2>Prestamos de vehículos nuevos y usados</h2></div>
+<div class="a container animate__animated animate__fadeIn" id="pc">
+  <div class="img"><h2>Préstamos de consumo</h2></div>
   <div class="txt" align="left" >
- 
+<!--  
  <h4>Beneficios:</h4>
     <p>❖ Atención y asesoría personalizada. <br>
     ❖ Financiamiento de hasta un 80% del valor del vehículo.<br>
@@ -197,14 +227,15 @@ footer{background-color: #222222;}
     ❖ Hasta 5 años para pagar.<br>
     ❖ Atractivas tasas de interés.<br>
     ❖ Facilidad de pagos electrónicos con cargo a las cuentas de nuestros clientes.<br>
-    </p> </div>
+    </p> -->
+  </div> 
 </div>
 
-<div class="a">
-  <div class="img"><h2>Prestamos de vehículos nuevos y usados</h2></div>
+<div class="a container animate__animated animate__fadeIn" id="pd">
+  <div class="img"><h2>Empleado feliz</h2></div>
   <div class="txt" align="left" >
  
- <h4>Beneficios:</h4>
+ <!-- <h4>Beneficios:</h4>
     <p>❖ Atención y asesoría personalizada. <br>
     ❖ Financiamiento de hasta un 80% del valor del vehículo.<br>
     ❖ Rápida aprobación.<br>
@@ -212,8 +243,26 @@ footer{background-color: #222222;}
     ❖ Hasta 5 años para pagar.<br>
     ❖ Atractivas tasas de interés.<br>
     ❖ Facilidad de pagos electrónicos con cargo a las cuentas de nuestros clientes.<br>
-    </p> </div>
+    </p> -->
+   </div>
 </div>
+
+<div class="a container animate__animated animate__fadeIn" id="pe">
+  <div class="img"><h2>Educación y cultura</h2></div>
+  <div class="txt" align="left" >
+ 
+ <!-- <h4>Beneficios:</h4>
+    <p>❖ Atención y asesoría personalizada. <br>
+    ❖ Financiamiento de hasta un 80% del valor del vehículo.<br>
+    ❖ Rápida aprobación.<br>
+    ❖ Disponibilidad de cuota flexible.<br>
+    ❖ Hasta 5 años para pagar.<br>
+    ❖ Atractivas tasas de interés.<br>
+    ❖ Facilidad de pagos electrónicos con cargo a las cuentas de nuestros clientes.<br>
+    </p> -->
+   </div>
+</div>
+
 
 
 
@@ -224,7 +273,7 @@ footer{background-color: #222222;}
 
 
 
-<footer style="color: white;">
+<footer style="color: white;" class="animate__animated animate__fadeInLeft">
 
 
 
@@ -243,7 +292,7 @@ footer{background-color: #222222;}
 
 setTimeout(() => {
   location.reload();
-}, 10000);
+}, 60000*5);
 
 </script>
 
