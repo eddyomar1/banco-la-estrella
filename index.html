@@ -25,6 +25,8 @@
 
 <style>
 
+#st{animation-delay:2s;}
+
 .img, .txt{display: inline-block;}
 
 .a,.b{display: inline-block; border: 5px blue solid; overflow: auto;}
@@ -33,6 +35,9 @@
 .b{ width: 15em; height:20em; margin-left: 5px; margin-right: 5px; border: 2px rgb(142, 142, 153) solid;}
 
 .txt{margin: 3px;}
+
+.txt,.txt p{margin-bottom: 0px;}
+
 
 /* .cen{box-align: center;} */
 
@@ -47,11 +52,11 @@
 
 
 
-.a{width:19em; height:3em;}
+.a{width:19em; height:3em; transition: 1s;}
 
 .a h2{font-size:1.5em;}
 
-.a h2:hover{font-size:1.8em; }
+/* .a h2,.a:hover{font-size:1.5em; } */
 
 
 #con-his{background-color: silver;  animation-duration:2s; animation-delay:5s;}
@@ -67,7 +72,7 @@
 
 
 
-footer{background-color: #222222; animation-delay:5s;}
+footer{background-color: #222222; animation-delay:10s;}
 
 @media screen and (max-width:375px){
 
@@ -79,15 +84,29 @@ footer{background-color: #222222; animation-delay:5s;}
 
 /* body{background-color: blue;} */
 
+.a h2,.a:hover{font-size:1.2em; }
+
 }
 
-@media screen and (min-width:768px){
+@media screen and (max-width:768px){
 
 .a{width:19em; height:4em;}
 
-.a h2{font-size:1.5em;}
+.a h2{font-size:1.3em;}
+.a h2,.a:hover{font-size:1.2em; }
 
 }
+
+@media screen and (min-width:770px){
+
+.a{width:19em; height:4em;}
+
+.a h2{font-size:1.4em;}
+
+}
+
+
+/* #ofl{position: fixed;} */
 
 
 </style>
@@ -101,7 +120,7 @@ footer{background-color: #222222; animation-delay:5s;}
     <!-- animate__flip -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="fa fa-solid fa-star animate__animated animate__flip"></i></a>
+    <a class="navbar-brand" href="#"><i class="fa fa-solid fa-star animate__animated animate__flip" id="st"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -148,6 +167,12 @@ footer{background-color: #222222; animation-delay:5s;}
 <br>
 <br>
 
+<!-- <details>
+  <summary>Más información</summary>
+  <h2>Nombre del sujeto</h2>
+  <img src="foto.jpg" alt="Foto del sujeto" />
+</details>
+<br> -->
 
 <div id="con-his" class="animate__animated animate__fadeInUp">
   <div id="his" class="">
@@ -330,8 +355,27 @@ footer{background-color: #222222; animation-delay:5s;}
 
 </footer>
 
+<div class="alert alert-warning d-flex align-items-center" id="ofl"  style="position: fixed; bottom: -100px; width: 100%; transition: 2s;" >
+  <i class="fas fa-exclamation-triangle"></i> &nbsp;&nbsp;&nbsp;
+  <div>
+    No hay conccion a internet :(
+  </div>
+</div>
 
 <script>
+
+var ofl = document.getElementById('ofl');
+
+setInterval(() => {
+  if(navigator.onLine==false){
+ ofl.style.bottom = '0px';}
+
+ if(navigator.onLine==true){
+ ofl.style.bottom = '-100px';}
+
+}, 5000);
+
+
 
 setTimeout(() => {
   location.reload();
